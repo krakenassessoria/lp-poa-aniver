@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 4px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Cor do fundo da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3d3d3d; /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas do polegar */
+    border: 2px solid #1a1a1a; /* Espaço entre o polegar e a borda */
+  }
+  
+  /* Opcional: estilizando o polegar ao ser acionado (hover) */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do polegar ao passar o mouse */
+  }
+
+  /* Remover o hover azul */
+.image-gallery-icon:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Ajustar o tamanho dos controles */
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* Ajustar a posição dos controles */
+.image-gallery-left-nav {
+  left: 10px !important;
+}
+
+.image-gallery-right-nav {
+  right: 10px !important;
+}
+
+@font-face {
+  font-family: 'ToothAndNail';
+  src: url('../fonts/ToothNail.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bjorke';
+  src: url('../fonts/The-Bjorke.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Riley';
+  src: url('../fonts/Bold-Riley.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
