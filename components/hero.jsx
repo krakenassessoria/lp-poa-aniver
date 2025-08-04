@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="py-10">
-            <button onClick={evento1} target="_blank"  className="mt-6 bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">
+            <button onClick={evento1} target="_blank"  className="mt-6 bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 transition duration-300">
               Reserve agora
             </button>
         </div>

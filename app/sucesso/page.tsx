@@ -18,7 +18,7 @@ export default function Sucesso() {
         {/* Botão de voltar */}
         <Link
           href="/"
-          className="mt-10 bg-red-500 text-white font-bold py-2 px-6 rounded hover:bg-red-500 transition duration-300 mx-auto w-fit"
+          className="mt-10 bg-blue-700 text-white font-bold py-2 px-6 rounded hover:bg-blue-800 transition duration-300 mx-auto w-fit"
         >
           Voltar
         </Link>

@@ -47,7 +47,7 @@ const LeadForm = () => {
   };
 
   return (
-    <div id='form' className="w-full bg-black bg-opacity-80 text-white py-12 px-4">
+    <div id='form' className="w-full bg-blue-700 bg-opacity-80 text-white py-12 px-4">
       <div className="max-w-xl mx-auto text-left space-y-8 px-4 lg:px-20">
         <h2 className="text-2xl font-bold text-center">Solicite seu orçamento</h2>
 
@@ -125,7 +125,7 @@ const LeadForm = () => {
               className={`mt-6 font-bold w-full py-2 px-10 rounded transition duration-300 flex items-center justify-center gap-2 mx-auto
                 ${loading
                   ? 'bg-gray-500 cursor-not-allowed'
-                  : 'bg-red-500 hover:bg-red-700 text-white'
+                  : 'bg-gray-200 hover:bg-gray-300 text-blue-700'
                 }`}
             >
               {loading && (
