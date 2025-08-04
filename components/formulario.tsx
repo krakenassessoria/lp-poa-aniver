@@ -61,7 +61,7 @@ const LeadForm = () => {
               value={form.nome}
               onChange={handleChange}
               required
-              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
@@ -74,7 +74,7 @@ const LeadForm = () => {
               value={form.telefone}
               onChange={handleChange}
               required
-              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
@@ -87,7 +87,7 @@ const LeadForm = () => {
               value={form.data}
               onChange={handleChange}
               required
-              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
@@ -101,7 +101,7 @@ const LeadForm = () => {
               onChange={handleChange}
               min={1}
               required
-              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
@@ -113,7 +113,7 @@ const LeadForm = () => {
               value={form.mensagem}
               onChange={handleChange}
               rows={3}
-              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-2 bg-white bg-opacity-10 rounded border border-white focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
