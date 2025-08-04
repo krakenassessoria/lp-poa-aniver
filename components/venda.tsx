@@ -23,9 +23,6 @@ const Venda = () => {
 
       <h1 className="text-lg lg:text-2xl font-bold py-6">GARANTA AGORA SUA EXPERIÊNCIA</h1>
 
-      <h3 className="font-bold text-lg lg:text-xl mb-2">Aberto de terça a domingo</h3>
-      <h4 className="text-base italic text-gray-200">Classificação livre</h4>
-
       {/* Pacote Básico Destaque */}
       <h2 className="text-lg lg:text-xl mt-6 font-extrabold uppercase tracking-wide text-yellow-400 drop-shadow-md mb-6">
         Pacote Básico de aniversário com espaço incluso
@@ -37,7 +34,7 @@ const Venda = () => {
         <div className="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg w-[280px]">
           <div className="flex flex-col ml-10">
             <h3 className="text-xl font-bold mb-2 text-yellow-300">Adultos</h3>
-            <p className="text-4xl font-extrabold text-white">R$ 148,00</p>
+            <p className="text-3xl font-extrabold text-white">R$ 148,00</p>
             <p className="italic text-sm mt-2">por pessoa</p>
           </div>
         </div>
@@ -46,7 +43,7 @@ const Venda = () => {
         <div className="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg w-[280px]">
           <div className="flex flex-col ml-10">
             <h3 className="text-xl font-bold mb-2 text-blue-300">Crianças</h3>
-            <p className="text-4xl font-extrabold text-white">R$ 98,00</p>
+            <p className="text-3xl font-extrabold text-white">R$ 98,00</p>
             <p className="italic text-sm mt-2">por criança</p>
           </div>
         </div>

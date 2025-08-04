@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Hero = () => {
 
   const evento1 = ()=> {
-    document.getElementById('venda').scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('form').scrollIntoView({ behavior: 'smooth' })
     sendGTMEvent({
       event: 'buttonClicked',
       category: 'Button',

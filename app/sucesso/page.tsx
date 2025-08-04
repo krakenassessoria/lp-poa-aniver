@@ -1,10 +1,14 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Sucesso() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white text-center px-6">
       <div className="flex flex-col w-full max-w-2xl mx-auto">
-        <h1 className="text-2xl px-4 font-bold text-yellow-400 mb-4">
+        <span className='flex w-full mx-auto items-center py-10'>
+            <Image className='mx-auto' src={"/logo_cm.png"} alt='Cara de Mau' width={80} height={80} />
+        </span>
+        <h1 className="text-2xl px-4 font-bold text-yellow-300 mb-4">
           🎉 Formulário enviado com sucesso!
         </h1>
         <p className="text-lg px-4 mt-6">
@@ -14,7 +18,7 @@ export default function Sucesso() {
         {/* Botão de voltar */}
         <Link
           href="/"
-          className="mt-10 bg-yellow-400 text-black font-bold py-2 px-6 rounded hover:bg-yellow-500 transition duration-300 mx-auto w-fit"
+          className="mt-10 bg-red-500 text-white font-bold py-2 px-6 rounded hover:bg-red-500 transition duration-300 mx-auto w-fit"
         >
           Voltar
         </Link>
