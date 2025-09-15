@@ -34,7 +34,7 @@ const LeadForm = () => {
           pessoas: form.pessoas,
           mensagem: form.mensagem,
         },
-        'ubkJhLLS63uAkCQAt'
+        '_7RZNrqOJcWQZBqHB'
       )
       .then(() => {
         window.location.href = '/sucesso';
