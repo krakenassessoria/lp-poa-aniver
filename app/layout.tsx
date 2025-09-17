@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import GTMPageView from "@/components/gtmpageview";
+import { Suspense } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "swap" });
 
@@ -67,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         ) : null}
-        <GTMPageView />
+
         {/* Meta Pixel noscript */}
         {FB_PIXEL_ID ? (
           <noscript>
@@ -80,7 +81,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         ) : null}
-        <div className="flex flex-col w-full h-screen">{children}</div>
+
+        {/* 👇 Envolva o componente com Suspense */}
+        {GTM_ID ? (
+          <Suspense fallback={null}>
+            <GTMPageView />
+          </Suspense>
+        ) : null}
+
+        <div className="flex flex-col w-full min-h-screen">{children}</div>
       </body>
     </html>
   );
