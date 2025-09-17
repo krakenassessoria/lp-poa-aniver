@@ -1,38 +1,45 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
 import Script from "next/script";
+import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ['300'] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Porto Cara de Mau",
   description: "Aqui os piratas matam a fome",
-  icons: {
-    icon: "/logo.png"
-  }
+  icons: { icon: "/logo.png" },
 };
 
-export const viewport = {
-  themeColor: '#000000',
+export const viewport: Viewport = {
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const GTM_ID = 'GTM-KV7HHTPD'
+const FB_PIXEL_ID = ''
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        <Script
-          id="meta-pixel"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+        {/* GTM */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `}
+        </Script>
+
+        {/* Meta Pixel */}
+        {FB_PIXEL_ID ? (
+          <Script id="fb-pixel" strategy="afterInteractive">
+            {`
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -41,26 +48,39 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '531786234432413');
+              fbq('init', '${FB_PIXEL_ID}');
               fbq('track', 'PageView');
-            `,
-          }}
-        />
-
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JEYZZS5XMW"></Script>
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JEYZZS5XMW');
-          `}
-        </Script>
+            `}
+          </Script>
+        ) : null}
       </head>
       <body className={montserrat.className}>
-        <div className="flex flex-col w-full h-screen">
-          {children}
-        </div>
+        {/* GTM noscript */}
+        {GTM_ID ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
+
+        {/* Meta Pixel noscript */}
+        {FB_PIXEL_ID ? (
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        ) : null}
+
+        <div className="flex flex-col w-full h-screen">{children}</div>
       </body>
     </html>
   );
