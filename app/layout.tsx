@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import GTMPageView from "@/components/gtmpageview";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "swap" });
 
@@ -79,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         ) : null}
-
+        <GTMPageView />
         <div className="flex flex-col w-full h-screen">{children}</div>
       </body>
     </html>
