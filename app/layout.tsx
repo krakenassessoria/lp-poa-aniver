@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         ) : null}
-
+        <GTMPageView />
         {/* Meta Pixel noscript */}
         {FB_PIXEL_ID ? (
           <noscript>
@@ -80,7 +80,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </noscript>
         ) : null}
-        <GTMPageView />
         <div className="flex flex-col w-full h-screen">{children}</div>
       </body>
     </html>
