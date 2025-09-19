@@ -3,7 +3,7 @@ import { FaRegHourglass, FaPersonCircleExclamation, FaGift } from "react-icons/f
 
 const ComoFunciona = () => {
   return (
-    <div className="relative w-full min-h-[100vh] overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('backgrounds/background2.jpg')" }}>
+    <div id="saiba" className="relative w-full min-h-[100vh] overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('backgrounds/background2.jpg')" }}>
       <div className="relative z-10 flex flex-col min-h-[100vh] py-10 items-center justify-center w-full text-center text-white bg-black bg-opacity-80">
         <div className='flex flex-col w-full max-w-xl mx-auto text-left space-y-4 px-5 text-sm'>
 

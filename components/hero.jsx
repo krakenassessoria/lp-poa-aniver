@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Hero = () => {
 
   const evento1 = ()=> {
-    document.getElementById('form').scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('saiba').scrollIntoView({ behavior: 'smooth' })
     sendGTMEvent({
       event: 'buttonClicked',
       category: 'Button',
@@ -37,20 +37,20 @@ const Hero = () => {
               <p className="text-3xl lg:text-5xl px-2" style={{ fontFamily: 'Riley' }}>
                 Cara de Mau Porto Alegre
               </p>
-              <p className="text-xl pt-10 px-4 font-bold">
+              <p className="text-xl pt-28 px-6 font-bold">
               Comemore seu aniversário na pizzaria mais famosa do Brasil!
               </p>
-              <p className="text-lg pt-6 px-3 font-extralight">
+              <p className="text-lg pt-6 px-6 font-extralight">
                 Espaço temático exclusivo com animadores e pizzas e bebidas a vontade
               </p>
           </div>
         </div>
         <div className="py-10">
             <button onClick={evento1} target="_blank"  className="mt-6 bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 transition duration-300">
-              Reserve agora
+              Saiba mais
             </button>
         </div>
-        <span className='relative z-10 text-sm mt-5 px-2'>Horários e datas sob reserva</span>
+        <span className='relative z-10 text-sm mt-5 px-10'>O Salão Pérola tem um mínimo de 30 pessoas para reserva</span>
       </div>
     </div>
   );
