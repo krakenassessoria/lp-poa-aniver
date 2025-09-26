@@ -15,7 +15,7 @@ export default function Footer() {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "Cara de Mau - Salão Pérola",
-    url: "https://seu-dominio.com", // troque pelo domínio real
+    url: "https://aniver.carademau.com.br",
     telephone: "+55 54 99371-2057",
     address: {
       "@type": "PostalAddress",
@@ -28,7 +28,6 @@ export default function Footer() {
     priceRange: "$$",
   };
 
-  // FAQ estruturado para rich results
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

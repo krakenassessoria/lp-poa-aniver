@@ -29,6 +29,34 @@ const images = [
     original: '/galeria/ambiente/poa7.jpg',
     thumbnail: '/galeria/ambiente/poa7.jpg',
   },
+  {
+    original: '/galeria/ambiente/poa8.jpg',
+    thumbnail: '/galeria/ambiente/poa8.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa9.jpg',
+    thumbnail: '/galeria/ambiente/poa9.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa10.jpg',
+    thumbnail: '/galeria/ambiente/poa10.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa11.jpg',
+    thumbnail: '/galeria/ambiente/poa11.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa12.jpg',
+    thumbnail: '/galeria/ambiente/poa12.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa13.jpg',
+    thumbnail: '/galeria/ambiente/poa13.jpg',
+  },
+  {
+    original: '/galeria/ambiente/poa14.jpg',
+    thumbnail: '/galeria/ambiente/poa14.jpg',
+  },
 ];
 
 const imagesMobile = [
@@ -67,7 +95,31 @@ const imagesMobile = [
   {
     original: '/galeria/ambiente/mobile/poa9.jpg',
     thumbnail: '/galeria/ambiente/mobile/poa9.jpg',
-  }
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa10.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa10.jpg',
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa11.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa11.jpg',
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa12.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa12.jpg',
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa13.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa13.jpg',
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa14.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa14.jpg',
+  },
+  {
+    original: '/galeria/ambiente/mobile/poa15.jpg',
+    thumbnail: '/galeria/ambiente/mobile/poa15.jpg',
+  },
 ];
 
 const Galeria = () => {

@@ -37,7 +37,7 @@ const Hero = () => {
               <p className="text-3xl lg:text-5xl px-2" style={{ fontFamily: 'Riley' }}>
                 Cara de Mau Porto Alegre
               </p>
-              <p className="text-xl pt-20 px-6 font-bold">
+              <p className="text-xl pt-20 lg:pt-28 px-6 font-bold">
               Comemore seu aniversário na pizzaria mais famosa do Brasil!
               </p>
               <p className="text-lg pt-6 px-6 font-extralight">
@@ -45,8 +45,8 @@ const Hero = () => {
               </p>
           </div>
         </div>
-        <div className="py-10">
-            <button onClick={evento1} target="_blank"  className="mt-6 bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 transition duration-300">
+        <div className="py-6">
+            <button onClick={evento1} target="_blank"  className="mt-6 bg-blue-800 text-white font-bold py-2 px-4 rounded hover:bg-blue-900 transition duration-300">
               Saiba mais
             </button>
         </div>
