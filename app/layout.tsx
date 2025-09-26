@@ -8,8 +8,8 @@ import { Suspense } from "react";
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Porto Cara de Mau",
-  description: "Aqui os piratas matam a fome",
+  title: "Eventos e aniversários",
+  description: "No Cara de Mau Porto Alegre temos o Salão Pérola, um espaço exclusivo para eventos e aniversários.",
   icons: { icon: "/logo.png" },
 };
 
