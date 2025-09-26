@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Eventos e aniversários",
   description: "No Cara de Mau Porto Alegre temos o Salão Pérola, um espaço exclusivo para eventos e aniversários.",
   icons: { icon: "/logo.png" },
+  verification: {
+    google: "eL3t9uyi0VSJynzfgbIIszwy2Lx8khum2s2vA3x9M4c"
+  }
 };
 
 export const viewport: Viewport = {
