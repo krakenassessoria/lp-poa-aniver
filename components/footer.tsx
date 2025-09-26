@@ -180,7 +180,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Abrir conversa no WhatsApp"
-              className="inline-flex items-center gap-2 rounded-full bg-green-500 px-5 py-2 font-semibold text-black hover:bg-green-400 transition"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-700 px-5 py-2 font-semibold text-white hover:bg-slate-800 transition"
             >
               <FaWhatsapp aria-hidden className="text-lg" />
               <span>(54) 99371-2057</span>
