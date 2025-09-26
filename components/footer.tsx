@@ -34,11 +34,11 @@ export default function Footer() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Onde comemorar aniversário em Porto Alegre com tema pirata?",
+        name: "Posso ter um espaço reservado para uma festa infantil?",
         acceptedAnswer: {
           "@type": "Answer",
           text:
-            "No Salão Pérola do Cara de Mau, um espaço exclusivo em Porto Alegre com decoração temática pirata e fundo do mar, atendimento completo e a melhor pizzaria temática do Brasil.",
+            "No Salão Pérola do Cara de Mau Porto Alegre temos um espaço exclusivo com decoração temática pirata e fundo do mar, atendimento completo e a melhor pizzaria temática do Brasil.",
         },
       },
       {
