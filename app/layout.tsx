@@ -9,11 +9,50 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "s
 
 export const metadata: Metadata = {
   title: "Eventos e aniversários",
-  description: "No Cara de Mau Porto Alegre temos o Salão Pérola, um espaço exclusivo para eventos e aniversários.",
   icons: { icon: "/logo.png" },
   verification: {
     google: "eL3t9uyi0VSJynzfgbIIszwy2Lx8khum2s2vA3x9M4c"
-  }
+  },
+  description:
+    "Celebre seu aniversário em grande estilo no espaço temático mais divertido de Porto Alegre! No Salão Pérola do Cara de Mau, você vive uma experiência única com tema pirata e fundo do mar, atendimento incrível e a melhor pizzaria temática do Brasil.",
+  keywords: [
+    "aniversário Porto Alegre",
+    "festa temática Porto Alegre",
+    "salão de festas Porto Alegre",
+    "salão pirata Porto Alegre",
+    "festa infantil Porto Alegre",
+    "pizzaria temática Porto Alegre",
+    "festa de aniversário infantil",
+    "salão fundo do mar Porto Alegre",
+    "onde fazer aniversário Porto Alegre",
+    "aniversário com tema pirata",
+    "restaurante para aniversário Porto Alegre",
+    "salão exclusivo Cara de Mau",
+  ],
+  openGraph: {
+    title: "Aniversários Temáticos com Tema Pirata em Porto Alegre | Cara de Mau",
+    description:
+      "Viva uma celebração inesquecível com tema pirata e fundo do mar no espaço exclusivo do Cara de Mau em Porto Alegre. Perfeito para aniversários e festas temáticas com a melhor pizzaria temática do Brasil.",
+    url: "https://aniver.carademau.com.br",
+    siteName: "Cara de Mau Porto Alegre",
+    type: "website",
+    locale: "pt_BR",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Aniversário temático pirata no Cara de Mau Porto Alegre",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Festas e Aniversários Temáticos | Cara de Mau Porto Alegre",
+    description:
+      "Tema pirata, fundo do mar e a melhor pizzaria temática do Brasil — tudo em um espaço exclusivo em Porto Alegre para seu aniversário ser épico!",
+    images: ["/logo.png"],
+  },
 };
 
 export const viewport: Viewport = {
