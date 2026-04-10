@@ -9,31 +9,31 @@ const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "s
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aniver.carademau.com.br"),
-  title: "Eventos e aniversÃ¡rios",
+  title: "Eventos e aniversários",
   icons: { icon: "/logo.png" },
   verification: {
     google: "eL3t9uyi0VSJynzfgbIIszwy2Lx8khum2s2vA3x9M4c"
   },
   description:
-    "Celebre seu aniversÃ¡rio em grande estilo no espaÃ§o temÃ¡tico mais divertido de Porto Alegre! No SalÃ£o PÃ©rola do Cara de Mau, vocÃª vive uma experiÃªncia Ãºnica com tema pirata e fundo do mar, atendimento incrÃ­vel e a melhor pizzaria temÃ¡tica do Brasil.",
+    "Celebre seu aniversário em grande estilo no espaço temático mais divertido de Porto Alegre! No Salão Pérola do Cara de Mau, você vive uma experiência única com tema pirata e fundo do mar, atendimento incrível e a melhor pizzaria temática do Brasil.",
   keywords: [
-    "aniversÃ¡rio Porto Alegre",
-    "festa temÃ¡tica Porto Alegre",
-    "salÃ£o de festas Porto Alegre",
-    "salÃ£o pirata Porto Alegre",
+    "aniversário Porto Alegre",
+    "festa temática Porto Alegre",
+    "salão de festas Porto Alegre",
+    "salão pirata Porto Alegre",
     "festa infantil Porto Alegre",
-    "pizzaria temÃ¡tica Porto Alegre",
-    "festa de aniversÃ¡rio infantil",
-    "salÃ£o fundo do mar Porto Alegre",
-    "onde fazer aniversÃ¡rio Porto Alegre",
-    "aniversÃ¡rio com tema pirata",
-    "restaurante para aniversÃ¡rio Porto Alegre",
-    "salÃ£o exclusivo Cara de Mau",
+    "pizzaria temática Porto Alegre",
+    "festa de aniversário infantil",
+    "salão fundo do mar Porto Alegre",
+    "onde fazer aniversário Porto Alegre",
+    "aniversário com tema pirata",
+    "restaurante para aniversário Porto Alegre",
+    "salão exclusivo Cara de Mau",
   ],
   openGraph: {
-    title: "AniversÃ¡rios TemÃ¡ticos com Tema Pirata em Porto Alegre | Cara de Mau",
+    title: "Aniversários Temáticos com Tema Pirata em Porto Alegre | Cara de Mau",
     description:
-      "Viva uma celebraÃ§Ã£o inesquecÃ­vel com tema pirata e fundo do mar no espaÃ§o exclusivo do Cara de Mau em Porto Alegre. Perfeito para aniversÃ¡rios e festas temÃ¡ticas com a melhor pizzaria temÃ¡tica do Brasil.",
+      "Viva uma celebração inesquecível com tema pirata e fundo do mar no espaço exclusivo do Cara de Mau em Porto Alegre. Perfeito para aniversários e festas temáticas com a melhor pizzaria temática do Brasil.",
     url: "https://aniver.carademau.com.br",
     siteName: "Cara de Mau Porto Alegre",
     type: "website",
@@ -43,15 +43,15 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "AniversÃ¡rio temÃ¡tico pirata no Cara de Mau Porto Alegre",
+        alt: "Aniversário temático pirata no Cara de Mau Porto Alegre",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Festas e AniversÃ¡rios TemÃ¡ticos | Cara de Mau Porto Alegre",
+    title: "Festas e Aniversários Temáticos | Cara de Mau Porto Alegre",
     description:
-      "Tema pirata, fundo do mar e a melhor pizzaria temÃ¡tica do Brasil â€” tudo em um espaÃ§o exclusivo em Porto Alegre para seu aniversÃ¡rio ser Ã©pico!",
+      "Tema pirata, fundo do mar e a melhor pizzaria temática do Brasil - tudo em um espaço exclusivo em Porto Alegre para seu aniversário ser épico!",
     images: ["/logo.png"],
   },
 };
@@ -125,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </noscript>
         ) : null}
 
-        {/* ðŸ‘‡ Envolva o componente com Suspense */}
+        {/* Envolva o componente com Suspense */}
         {GTM_ID ? (
           <Suspense fallback={null}>
             <GTMPageView />
