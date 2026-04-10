@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import { sendGTMEvent } from '@next/third-parties/google';
 import Image from 'next/image';
 
@@ -38,10 +38,10 @@ const Hero = () => {
                 Cara de Mau Porto Alegre
               </p>
               <p className="text-xl pt-20 lg:pt-28 px-6 font-bold">
-              Comemore seu aniversário na pizzaria mais famosa do Brasil!
+                Seu aniversário no Salão Pérola com experiência pirata inesquecível
               </p>
               <p className="text-lg pt-6 px-6 font-extralight">
-                Espaço temático exclusivo com animadores e pizzas e bebidas a vontade
+                Espaço para até 80 pessoas sentadas, pizza à vontade, água e refrigerante inclusos
               </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Hero = () => {
               Saiba mais
             </button>
         </div>
-        <span className='relative z-10 text-sm mt-5 px-10'>O Salão Pérola tem um mínimo de 30 pessoas para reserva</span>
+        <span className='relative z-10 text-sm mt-5 px-10'>Pacotes para até 30, 40 ou 50 pessoas (taxa de serviço inclusa)</span>
       </div>
     </div>
   );

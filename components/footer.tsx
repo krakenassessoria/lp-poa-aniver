@@ -1,10 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP = "5554993712057";
 const WHATSAPP_MSG = encodeURIComponent(
-  "Olá! Quero informações para aniversário no Salão Pérola (tema pirata)."
+  "Olá! Quero informações para aniversário no Salão Pérola (Porto Alegre)."
 );
 const MAPS_Q = encodeURIComponent(
   "Av. dos Estados, 111 - Boulevard Laçador, Porto Alegre - RS"
@@ -25,7 +25,7 @@ export default function Footer() {
       addressCountry: "BR",
     },
     servesCuisine: "Pizza",
-    priceRange: "$$",
+    priceRange: "$$$",
   };
 
   const faqJsonLd = {
@@ -34,47 +34,42 @@ export default function Footer() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Posso ter um espaço reservado para uma festa infantil?",
+        name: "Qual a capacidade do Salão Pérola?",
         acceptedAnswer: {
           "@type": "Answer",
-          text:
-            "No Salão Pérola do Cara de Mau Porto Alegre temos um espaço exclusivo com decoração temática pirata e fundo do mar, atendimento completo e a melhor pizzaria temática do Brasil.",
+          text: "O Salão Pérola comporta até 80 pessoas sentadas.",
         },
       },
       {
         "@type": "Question",
-        name: "O espaço atende festas infantis e adultas?",
+        name: "Quais são os pacotes de aniversário?",
         acceptedAnswer: {
           "@type": "Answer",
-          text:
-            "Sim. O salão foi pensado para encantar crianças e adultos, com ambientação imersiva e cardápio que agrada todas as idades.",
+          text: "Pacotes com taxa de serviço inclusa: até 30 pessoas por R$ 4.500,00; até 40 pessoas por R$ 6.000,00; até 50 pessoas por R$ 7.500,00.",
         },
       },
       {
         "@type": "Question",
-        name: "Como reservar o salão para aniversário?",
+        name: "O que está incluso no pacote?",
         acceptedAnswer: {
           "@type": "Answer",
-          text:
-            "Você pode reservar pelo WhatsApp ou formulário do site. Nossa equipe confirma disponibilidade, opções de menu e detalhes da sua festa.",
+          text: "Pizza à vontade (8 sabores salgados e 4 doces), água e refrigerante, decoração fundo do mar com projeção, bolo decorativo para fotos, garçons piratas e sistema de som para playlist.",
         },
       },
       {
         "@type": "Question",
-        name: "O salão fica onde em Porto Alegre?",
+        name: "Quais são os horários e duração da festa?",
         acceptedAnswer: {
           "@type": "Answer",
-          text:
-            "Dentro do Boulevard Laçador, na Av. dos Estados, 111 — ao lado do Aeroporto Salgado Filho.",
+          text: "As festas podem ocorrer entre 14h e 23h, com até 4 horas de permanência. Não há disponibilidade nas segundas-feiras.",
         },
       },
       {
         "@type": "Question",
-        name: "Há opções personalizadas para o tema da festa?",
+        name: "Existem adicionais?",
         acceptedAnswer: {
           "@type": "Answer",
-          text:
-            "Sim. Oferecemos personalizações de ambientação e experiência temática pirata/fundo do mar, conforme a necessidade do seu evento.",
+          text: "Sim: Camarim das Sereias e Piratas (maquiadora) conforme consumo. Decoração diferente do fundo do mar e mesa de doces ficam sob responsabilidade do cliente.",
         },
       },
     ],
@@ -83,20 +78,15 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white pb-20 pt-10">
       <div className="container mx-auto px-4 flex flex-col items-center space-y-10">
-        {/* JSON-LD (empresa/local) */}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
-        {/* JSON-LD (FAQ) */}
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
 
-        {/* FAQ visível (acessível) */}
         <section
           aria-labelledby="faq-title"
           className="w-full max-w-3xl border border-white/10 rounded-2xl p-6 bg-white/5 backdrop-blur"
@@ -108,68 +98,57 @@ export default function Footer() {
           <div className="divide-y divide-white/10">
             <details className="group py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
-                <span>Onde comemorar aniversário em Porto Alegre com tema pirata?</span>
+                <span>Qual a capacidade do Salão Pérola?</span>
+                <span className="transition-transform group-open:rotate-180">⌄</span>
+              </summary>
+              <p className="mt-2 text-sm text-gray-200">Até 80 pessoas sentadas.</p>
+            </details>
+
+            <details className="group py-3">
+              <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
+                <span>Quais são os pacotes de aniversário?</span>
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <p className="mt-2 text-sm text-gray-200">
-                No <strong>Salão Pérola do Cara de Mau</strong>, com decoração
-                <strong> pirata e fundo do mar</strong>, atendimento completo e a
-                <strong> melhor pizzaria temática do Brasil</strong>.
+                Até 30 pessoas: R$ 4.500,00. Até 40 pessoas: R$ 6.000,00. Até 50 pessoas: R$ 7.500,00.
+                Todos com taxa de serviço inclusa.
               </p>
             </details>
 
             <details className="group py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
-                <span>O espaço atende festas infantis e adultas?</span>
+                <span>O que está incluso no pacote?</span>
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <p className="mt-2 text-sm text-gray-200">
-                Sim. A ambientação imersiva foi pensada para encantar crianças e adultos.
+                Pizza à vontade (8 sabores salgados + 4 doces), água e refrigerante, decoração fundo do mar
+                com projeção, bolo decorativo para fotos, garçons piratas e sistema de som para playlist.
               </p>
             </details>
 
             <details className="group py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
-                <span>Como reservar o salão para aniversário?</span>
+                <span>Quais são os horários e duração?</span>
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <p className="mt-2 text-sm text-gray-200">
-                Fale conosco pelo{" "}
-                <a
-                  className="underline decoration-dotted hover:decoration-solid"
-                  href={`https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>{" "}
-                ou pelo formulário. Confirmamos disponibilidade, menu e detalhes do evento.
+                Horários entre 14h e 23h, com até 4 horas de permanência. Não disponível nas segundas-feiras.
               </p>
             </details>
 
             <details className="group py-3">
               <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
-                <span>O salão fica onde em Porto Alegre?</span>
+                <span>Existem adicionais para personalizar?</span>
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
               <p className="mt-2 text-sm text-gray-200">
-                Dentro do Boulevard Laçador — Av. dos Estados, 111, ao lado do Aeroporto Salgado Filho.
-              </p>
-            </details>
-
-            <details className="group py-3">
-              <summary className="flex cursor-pointer list-none items-center justify-between text-left font-semibold">
-                <span>Há opções personalizadas para o tema da festa?</span>
-                <span className="transition-transform group-open:rotate-180">⌄</span>
-              </summary>
-              <p className="mt-2 text-sm text-gray-200">
-                Sim. Oferecemos personalizações de ambientação e experiência temática pirata/fundo do mar.
+                Camarim das Sereias e Piratas (maquiadora), conforme consumo. Decoração diferente do fundo do mar
+                e mesa de doces são de responsabilidade do cliente.
               </p>
             </details>
           </div>
         </section>
 
-        {/* Contatos */}
         <div className="text-center space-y-4">
           <h3 className="text-xl font-bold">Fale conosco</h3>
 
@@ -195,7 +174,7 @@ export default function Footer() {
                   className="underline decoration-dotted hover:decoration-solid"
                   aria-label="Abrir mapa no Google Maps"
                 >
-                  Av. dos Estados, 111 — Porto Alegre/RS
+                  Av. dos Estados, 111 - Porto Alegre/RS
                 </Link>
               </div>
               <div className="text-gray-400">
@@ -205,12 +184,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Marca/Créditos */}
         <div className="flex flex-col items-center">
           <Image
             priority
             src="/logo_cm.png"
-            alt="Cara de Mau — Pizzaria temática"
+            alt="Cara de Mau - Pizzaria temática"
             width={80}
             height={80}
             className="opacity-95"

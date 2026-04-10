@@ -1,6 +1,4 @@
-import Image from "next/image"
-
-//Ander Silva
+﻿import Image from "next/image"
 
 const Apresentacao = () => {
   return (
@@ -11,22 +9,21 @@ const Apresentacao = () => {
         </div>
 
         <div className="flex flex-col w-full justify-center my-10 px-10 text-base lg:text-lg lg:max-w-xl mx-auto text-justify space-y-4">
-         <p>
-  No <b className="font-bold">Cara de Mau Porto Alegre</b>, contamos com o <b className="font-bold">Salão Pérola</b> – um ambiente temático e encantador, perfeito para transformar aniversários em momentos inesquecíveis.
-</p>
+          <p>
+            No <b className="font-bold">Cara de Mau Porto Alegre</b>, o <b className="font-bold">Salão Pérola</b> é o espaço exclusivo no 2º andar para celebrar seu aniversário com toda a sua tripulação.
+          </p>
 
-<p>
-  O espaço é totalmente <b className="font-bold">tematizado com projeções do fundo do mar</b>, som ambiente com suas playlists do Spotify preferidas e toda a estrutura necessária para receber seus convidados com conforto e diversão.
-</p>
+          <p>
+            O salão recebe até <b className="font-bold">80 pessoas sentadas</b>, com decoração tema fundo do mar com projeção, bolo decorativo para fotos e atendimento com garçons piratas.
+          </p>
 
-<p>
-  Além de <b className="font-bold">pizzas e bebidas à vontade</b>, o serviço conta com o atendimento dos piratas mais animados dos sete mares!
-</p>
+          <p>
+            Você aproveita <b className="font-bold">pizza à vontade</b>, água e refrigerante inclusos, além de sistema de som para usar sua playlist.
+          </p>
 
-<p>
-  <b className="font-bold">Viva uma experiência única, divertida e deliciosa</b> – porque aqui, a festa vira uma verdadeira aventura!
-</p>
-
+          <p>
+            <b className="font-bold">Uma festa completa, temática e divertida</b>, do jeito que um aniversário pirata merece.
+          </p>
         </div>
       </div>
     </div>
