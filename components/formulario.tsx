@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaUser, FaPhone, FaCalendar, FaPeopleGroup, FaRegHourglass } from 'react-icons/fa6';
 import emailjs from 'emailjs-com';
+import { event as gtagEvent } from '@/lib/gtag';
 
 const LeadForm = () => {
   const [form, setForm] = useState({
@@ -37,6 +38,11 @@ const LeadForm = () => {
         '_7RZNrqOJcWQZBqHB'
       )
       .then(() => {
+        gtagEvent({
+          action: 'generate_lead',
+          funnelStep: 'lead_submit',
+          label: 'Formulario aniversario enviado'
+        });
         window.location.href = '/sucesso';
       })
       .catch((error) => {

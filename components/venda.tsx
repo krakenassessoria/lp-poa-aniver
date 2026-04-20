@@ -1,14 +1,24 @@
-﻿"use client"
+"use client"
+
+import { useState } from "react";
 import { event as gtagEvent } from "@/lib/gtag";
 
 const Venda = () => {
+  const [hasTrackedPricing, setHasTrackedPricing] = useState(false);
+
   const handleClick = () => {
+    if (hasTrackedPricing) {
+      return;
+    }
+
     gtagEvent({
-      action: "package_view",
-      category: "CTA",
+      action: "view_pricing",
+      funnelStep: "pricing_view",
       label: "Pacotes Salao Perola Porto Alegre",
       value: 1,
     });
+
+    setHasTrackedPricing(true);
   };
 
   return (

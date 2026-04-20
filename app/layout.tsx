@@ -1,9 +1,8 @@
-﻿import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import GTMPageView from "@/components/gtmpageview";
-import { Suspense } from "react";
+import { GA_MEASUREMENT_ID, LANDING_CONTEXT } from "@/lib/gtag";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["300"], display: "swap" });
 
@@ -63,25 +62,12 @@ export const viewport: Viewport = {
   maximumScale: 1
 };
 
-const GTM_ID = 'GTM-KV7HHTPD'
-const FB_PIXEL_ID = ''
+const FB_PIXEL_ID = '';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* GTM */}
-        <Script id="gtm" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
-
-        {/* Meta Pixel */}
         {FB_PIXEL_ID ? (
           <Script id="fb-pixel" strategy="afterInteractive">
             {`
@@ -98,21 +84,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `}
           </Script>
         ) : null}
+
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></Script>
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('event', 'view_landing', {
+              city: '${LANDING_CONTEXT.city}',
+              location: '${LANDING_CONTEXT.location}',
+              landing_name: '${LANDING_CONTEXT.landingName}',
+              landing_offer: '${LANDING_CONTEXT.landingOffer}',
+              landing_source: 'landing_page',
+              destination_product: '${LANDING_CONTEXT.destinationProduct}',
+              funnel_step: 'landing_view'
+            });
+          `}
+        </Script>
       </head>
       <body className={montserrat.className}>
-        {/* GTM noscript */}
-        {GTM_ID ? (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
-        ) : null}
-
-        {/* Meta Pixel noscript */}
         {FB_PIXEL_ID ? (
           <noscript>
             <img
@@ -125,16 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </noscript>
         ) : null}
 
-        {/* Envolva o componente com Suspense */}
-        {GTM_ID ? (
-          <Suspense fallback={null}>
-            <GTMPageView />
-          </Suspense>
-        ) : null}
-
         <div className="flex flex-col w-full min-h-screen">{children}</div>
       </body>
     </html>
   );
 }
-
