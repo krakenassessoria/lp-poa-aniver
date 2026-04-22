@@ -8,6 +8,8 @@ export const LANDING_CONTEXT = {
   destinationProduct: 'salao_perola_aniversario'
 }
 
+type GtagFunction = (command: 'event', action: string, params: Record<string, unknown>) => void
+
 export const event = ({
   action,
   label,
@@ -19,8 +21,12 @@ export const event = ({
   value?: number
   funnelStep: string
 }) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', action, {
+  const gtag = typeof window !== 'undefined'
+    ? (window as Window & { gtag?: GtagFunction }).gtag
+    : undefined
+
+  if (gtag) {
+    gtag('event', action, {
       event_category: 'landing_page',
       event_label: label || LANDING_CONTEXT.landingName,
       value,

@@ -1,16 +1,15 @@
 ﻿"use client"
-import { sendGTMEvent } from '@next/third-parties/google';
+import { event as gtagEvent } from '../lib/gtag';
 import Image from 'next/image';
 
 const Hero = () => {
 
   const evento1 = ()=> {
     document.getElementById('saiba').scrollIntoView({ behavior: 'smooth' })
-    sendGTMEvent({
-      event: 'buttonClicked',
-      category: 'Button',
-      label: 'reserva',
-      value: "reserva"
+    gtagEvent({
+      action: 'view_offer_details',
+      funnelStep: 'details_view',
+      label: 'Boulevard aniversario hero'
     })
   }
 
