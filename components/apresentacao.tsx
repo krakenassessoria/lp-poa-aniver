@@ -10,11 +10,11 @@ const Apresentacao = () => {
 
         <div className="flex flex-col w-full justify-center my-10 px-10 text-base lg:text-lg lg:max-w-xl mx-auto text-justify space-y-4">
           <p>
-            No <b className="font-bold">Cara de Mau Porto Alegre</b>, o <b className="font-bold">Salão Pérola</b> é o espaço exclusivo no 2º andar para celebrar seu aniversário com toda a sua tripulação.
+            No <b className="font-bold">Cara de Mau Porto Alegre</b>, o <b className="font-bold">Salão Pérola</b> é um ambiente temático no 2º andar para celebrar seu aniversário com toda a sua tripulação.
           </p>
 
           <p>
-            O salão recebe até <b className="font-bold">80 pessoas sentadas</b>, com decoração tema fundo do mar com projeção, bolo decorativo para fotos e atendimento com garçons piratas.
+            O salão recebe até <b className="font-bold">120 pessoas sentadas</b>, com decoração tema fundo do mar com projeção, bolo decorativo para fotos e atendimento com garçons piratas.
           </p>
 
           <p>

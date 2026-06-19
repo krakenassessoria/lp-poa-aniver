@@ -51,7 +51,7 @@ const Venda = () => {
           </div>
         </div>
 
-        <p className="text-xs italic mt-8 px-8">Espaço com capacidade para até 80 pessoas sentadas</p>
+        <p className="text-xs italic mt-8 px-8">Espaço com capacidade para até 120 pessoas sentadas</p>
       </div>
     </div>
   );

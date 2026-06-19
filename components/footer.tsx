@@ -37,7 +37,7 @@ export default function Footer() {
         name: "Qual a capacidade do Salão Pérola?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "O Salão Pérola comporta até 80 pessoas sentadas.",
+          text: "O Salão Pérola comporta até 120 pessoas sentadas.",
         },
       },
       {
@@ -101,7 +101,7 @@ export default function Footer() {
                 <span>Qual a capacidade do Salão Pérola?</span>
                 <span className="transition-transform group-open:rotate-180">⌄</span>
               </summary>
-              <p className="mt-2 text-sm text-gray-200">Até 80 pessoas sentadas.</p>
+              <p className="mt-2 text-sm text-gray-200">Até 120 pessoas sentadas.</p>
             </details>
 
             <details className="group py-3">

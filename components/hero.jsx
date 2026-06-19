@@ -49,7 +49,7 @@ const Hero = () => {
             </p>
 
             <p className="mx-auto mt-6 max-w-3xl text-xl text-slate-100">
-              Espaço para até 80 pessoas sentadas, pizza à vontade, água e refrigerante inclusos.
+              Espaço para até 120 pessoas sentadas, pizza à vontade, água e refrigerante inclusos.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2 text-sm">
@@ -86,7 +86,7 @@ const Hero = () => {
               Seu aniversário com experiência pirata inesquecível
             </p>
             <p className="mt-3 text-base text-slate-100">
-              Até 80 pessoas sentadas, pizza à vontade, água e refrigerante inclusos.
+              Até 120 pessoas sentadas, pizza à vontade, água e refrigerante inclusos.
             </p>
 
             <button onClick={evento1} className="mt-6 w-full rounded-lg bg-cyan-400 py-3 text-base font-bold text-slate-950 transition hover:bg-cyan-300">
